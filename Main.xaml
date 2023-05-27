@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="630,1449" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="630,1656" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
       <x:String>System.Activities</x:String>
@@ -59,7 +59,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="540,1384" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="540,1551" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Double" Name="ch" />
       <Variable x:TypeArguments="x:Double" Name="cr" />
@@ -70,22 +70,33 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Input" sap:VirtualizedContainerService.HintSize="498,629" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Input" sap:VirtualizedContainerService.HintSize="498,796" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Height" sap:VirtualizedContainerService.HintSize="388,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label=" Enter Cylinder Height" Title="Cylinder Height">
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Height" sap:VirtualizedContainerService.HintSize="436,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label=" Enter Cylinder Height" Title="Cylinder Height">
         <ui:InputDialog.Result>
           <OutArgument x:TypeArguments="x:Double">[ch]</OutArgument>
         </ui:InputDialog.Result>
       </ui:InputDialog>
-      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input radius" sap:VirtualizedContainerService.HintSize="388,239" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter Cylinder Radius" Title="Cylinder radius">
-        <ui:InputDialog.Result>
-          <OutArgument x:TypeArguments="x:Double">[cr]</OutArgument>
-        </ui:InputDialog.Result>
-      </ui:InputDialog>
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,406" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,327" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input radius" sap:VirtualizedContainerService.HintSize="334,239" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter Cylinder Radius" Title="Cylinder radius">
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:Double">[cr]</OutArgument>
+              </ui:InputDialog.Result>
+            </ui:InputDialog>
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
     </Sequence>
     <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="498,224" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
